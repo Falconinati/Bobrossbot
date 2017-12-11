@@ -164,7 +164,7 @@ def bot():
 
         ]
     '''BOT|REDIRECT URLS''' # Enter Redirect/Information URL(S) in the strings below
-    code = "^|| [code](https://github.com/whaliam/BobRossBot) ^|| [feedback 💕](https://www.reddit.com/user/BobRossBot_/comments/7ikvn5/feedback_3_and_code/)"
+    code = "^|| [code](https://github.com/whaliam/BobRossBot) ^||💻[feedback 💕](https://www.reddit.com/user/BobRossBot_/comments/7ikvn5/feedback_3_and_code/)"
     username = "BobRossBot_"
     # Set subreddit parameters
     subreddit = reddit.subreddit("all")
