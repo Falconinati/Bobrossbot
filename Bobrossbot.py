@@ -16,7 +16,7 @@ now = datetime.now()
 def bot():
 
 
-    # BobRossBot_ v2.0 (cleaned up code, added a simple GUI, added an imgur gallery & added more comments)
+    # BobRossBot_ v2.5 (cleaned up code, added youtube videos)
     # Created by /u/whaliam
     # 6Ep96ck9@protonmail.com
     # Create Reddit instance
@@ -153,18 +153,115 @@ def bot():
             " [Here's a random painting :)](https://imgur.com/gallery/8USdT) ",
             " [Here's a random painting :)](https://imgur.com/gallery/CE5blh5) ",
             " [Here's a random painting :)](https://imgur.com/gallery/m7ymyYp) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/87JbFoJ) ",
             " [Here's a random painting :)](https://imgur.com/gallery/2ECwjYr) ",
             " [Here's a random painting :)](https://imgur.com/gallery/kK1Zr) ",
             " [Here's a random painting :)](https://imgur.com/gallery/qs6Xd) ",
             " [Here's a random painting :)](https://imgur.com/gallery/DJ4zL) ",
             " [Here's a random painting :)](https://imgur.com/gallery/xWBUI8S) ",
             " [Here's a random painting :)](https://imgur.com/gallery/hM7ls6K) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/P6L9y) "
-
+            " [Here's a random painting :)](https://imgur.com/gallery/P6L9y) ",
+            " [Here's a random painting :)](https://imgur.com/a/BP7kB) ",
+            " [Here's a random painting :)](https://i.imgur.com/gyuNg8j.jpg) ",
+            " [Here's a random painting :)](https://imgur.com/7RmtwPK) ",
+            " [Here's a random painting :)](https://i.imgur.com/sgJbHNS.jpg) ",
+            " [Here's a random painting :)](https://imgur.com/a/tMF0C) ",
+            " [Here's a random painting :)](https://i.imgur.com/1qytrLH.jpg) ",
+            " [Here's a random painting :)](https://i.imgur.com/BezhUOU.jpg) ",
+            " [Here's a random painting :)](https://imgur.com/gallery/fzQkm) ",
+            " [Here's a random painting :)](https://imgur.com/a/jSPlu) ",
+            " [Here's a random painting :)](https://imgur.com/a/e01ND) ",
+            " [Here's a random painting :)](https://imgur.com/a/oeGZ6) ",
+            " [Here's a random painting :)](https://imgur.com/w4nER2N) ",
+            " [Here's a random painting :)](https://i.imgur.com/7b44qgF.jpg) ",
+            " [Here's a random painting :)](https://i.imgur.com/7b44qgF.jpg) ",
+            " [Here's a random painting :)](https://imgur.com/L48F2T6) ",
+            " [Here's a random painting :)](https://imgur.com/iYytETj) "
         ]
+
+    '''YOUTUBE URLS'''
+    youtube_links = \
+    [
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=lLWEXRAnQd0) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=VlucWfTUo1A) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=dNEp3hoHSDI) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=oh5p5f5_-7A) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=kasGRkfkiPM) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=pw5ETGiiBRg) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=L5bXkI0-pEg) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=I-ousb8-SD0) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=UQ-RTZCOQn0) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=BW2wKKFvH1g) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=XZmdzfvXRuw) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=vgbMONXc9Cs) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=HCsCatvigtw) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=enutOy-nsZk) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=LygUyAb78oY) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=VnZEpic2UzU) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=zxj3xLDNxo0) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=PutvF_P4588) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=8ysFkNYwhAE) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=qTDQt_PdlYc) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=kJFB6rH3z2A) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=TohG7F8M3Ls) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=DFSIQNjKRfk) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=nJGCVFn57U8) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=IEQWfszfRlA) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=mEU0stNfkxI) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=RInDWhYceLU) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=0FYfo94qefg) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=qx2IsmrCs3c) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=qXElmiqzcI0) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=DFQlu6eqrBo) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=MHJB0IBnuD4) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=OFKFUJ9eDNs) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=Ugiwi8uizpg) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=4KYxkqlzyqM) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=Qj6lMtnCt8o) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=wrbGlR22K0Q) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=RrBsbqO9aqI) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=eTEKGOi6SVg) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=GzSqjyQUPZQ) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=O6L5YPt9CeU) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=zoTeyliLn5o) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=aA8RhtaWACA) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=Da4SPyh1ATM) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=uEUMVwc4o5U) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=UOziR7PoVco) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=vrAMRxBB5KI) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=NcVeRlPu_5w) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=Vx6v47gHBWM) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=OJ_xqtvZf3o) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=8P-YeoTmVrw) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=1s58rW0_LN4) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=lzODyJS2ZIg) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=Wj-3ct7RvAI) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=KYlM2zJnNWY) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=DqhzxdkdQS0) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=jfCsew_mz7A) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=gMEZp47VKC0) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=iRMsb9Vf7GM) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=4XxClvPZ1RE) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=fBh1nA4pMDY) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=loAzRUzx1wI) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=AGhXEPfp-W4) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=GhOGZMpPUSE) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=tWoInh2USOs) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=530_cVmexiI) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=6evqNlOO7Bw) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=o2cjLA_wgIk) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=miJ19Kz_i3Y) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=OHSm8kLE7js) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=kNZssD9zWlw) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=RqtDliGeyTg) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=lSeRrm5ZK9c) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=puGk2iFvvp0) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=EVQcDEiJh2o) ",
+    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=0pwoixRikn4) "
+
+    ]
+
     '''BOT|REDIRECT URLS''' # Enter Redirect/Information URL(S) in the strings below
-    code = "^|| [code](https://github.com/whaliam/BobRossBot) ^||💻[feedback 💕](https://www.reddit.com/user/BobRossBot_/comments/7ikvn5/feedback_3_and_code/)"
+    code = "|| [code](https://github.com/whaliam/BobRossBot) ||💻[feedback](https://www.reddit.com/user/BobRossBot_/comments/7ikvn5/feedback_3_and_code/)"
     username = "BobRossBot_"
     # Set subreddit parameters
     subreddit = reddit.subreddit("all")
@@ -175,7 +272,7 @@ def bot():
     for comment in subreddit.stream.comments():
 
         if re.search("bob ross", comment.body, re.IGNORECASE):
-            ross_reply = random.choice(ross_quotes) + str("||") + random.choice(ross_images)
+            ross_reply = random.choice(ross_quotes) + str("||") + random.choice(youtube_links) + str("||") + random.choice(ross_images)
             print("comment found!")
             print("preparing quote")
             comment.reply(ross_reply + code)
@@ -183,6 +280,7 @@ def bot():
             print("starting cooldown")
             print("cooldown")
             print(str(now))
+            print(str(comment.reply))
             time.sleep(10)
 
     # Created by /u/whaliam
