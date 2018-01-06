@@ -1,20 +1,19 @@
 """START"""
 
 # Import required modules
+import datetime
 import praw
-import pdb
-import re
-import os
-import time
 import random
-import sys
-from datetime import datetime
+import time
+import tkinter
+
+
 # Defining time
-now = datetime.now()
+now = datetime.datetime.now()
 '''BOT'''
 
-def bot():
 
+def bot():
 
     # BobRossBot_ v2.5 (cleaned up code, added youtube videos)
     # Created by /u/whaliam
@@ -23,16 +22,16 @@ def bot():
     # Setting variables
     print("Logging in...")
 
-    reddit = praw.Reddit(user_agent='<User_Agent>', # A brief description of your bot! <#
-                         client_id='<API_Public_Key>',# Your API public key
-                         client_secret='(API_Secret_key>', # Your API private key
-                         username='<Username>', # Your Reddit username
-                         password='<Password>') # Your Reddit password
+    reddit = praw.Reddit(user_agent='<User_Agent>',  # A brief description of your bot! <#
+                         client_id='<API_Public_Key>',  # Your API public key
+                         client_secret='(API_Secret_key>',  # Your API private key
+                         username='<Username>',  # Your Reddit username
+                         password='<Password>')  # Your Reddit password
 
     print("Welcome BobRossBot_ :)")
     print("Started: " + str(now))
     print("Loading quotes...")
-    '''BOT|QUOTES''' # Enter quotes in the array below
+    '''BOT|QUOTES'''  # Enter quotes in the array below
     ross_quotes = \
         [
             " 'Trees cover up a multitude of sins.'",
@@ -41,7 +40,8 @@ def bot():
 
             " 'And that makes it look like birch trees, isn't that sneaky? Heh. Ha. It's gorgeous.' ",
 
-            " 'Be sure to use odorless paint-thinner. If it's not odorless, you'll find yourself working alone very, very quick.' ",
+            " 'Be sure to use odorless paint-thinner. If it's not odorless, you'll find yourself working alone very, "
+            "very quick.' ",
 
             " 'Let's just blend this little rascal here, ha! Happy as we can be.' ",
 
@@ -71,7 +71,8 @@ def bot():
 
             " 'I like to beat the brush.' ",
 
-            " 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage.' ",
+            " 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But "
+            "when I get home, the only thing I have power over is the garbage.' ",
 
             " 'You need the dark in order to show the light.' ",
 
@@ -81,19 +82,26 @@ def bot():
 
             " 'There's nothing wrong with having a tree as a friend.' ",
 
-            " 'They say everything looks better with odd numbers of things. But sometimes I put even numbers—just to upset the critics.' ",
+            " 'They say everything looks better with odd numbers of things. But sometimes I put even numbers—just to "
+            "upset the critics.' ",
 
             " 'How do you make a round circle with a square knife? That’s your challenge for the day.' ",
 
-            " 'I remember when my Dad told me as a kid, ‘If you want to catch a rabbit, stand behind a tree and make a noise like a carrot. Then when the rabbit comes by you grab him.’ Works pretty good until you try to figure out what kind of noise a carrot makes…' ",
+            " 'I remember when my Dad told me as a kid, ‘If you want to catch a rabbit, stand behind a tree and make a "
+            "noise like a carrot. Then when the rabbit comes by you grab him.’ Works pretty good until you try to "
+            "figure out what kind of noise a carrot makes…' ",
 
-            " 'We tell people sometimes: we're like drug dealers, come into town and get everybody absolutely addicted to painting. It doesn't take much to get you addicted.' ",
+            " 'We tell people sometimes: we're like drug dealers, come into town and get everybody absolutely addicted "
+            "to painting. It doesn't take much to get you addicted.' ",
 
-            " 'The secret to doing anything is believing that you can do it. Anything that you believe you can do strong enough, you can do. Anything. As long as you believe. ",
+            " 'The secret to doing anything is believing that you can do it. Anything that you believe you can do "
+            "strong enough, you can do. Anything. As long as you believe. ",
 
             " 'Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things' ",
 
-            " 'Oooh, if you have never been to Alaska, go there while it is still wild. My favorite uncle asked me if I wanted to go there, Uncle Sam. He said if you don't go, you're going to jail. That is how Uncle Sam asks you.' ",
+            " 'Oooh, if you have never been to Alaska, go there while it is still wild. My favorite uncle asked me if "
+            "I wanted to go there, Uncle Sam. He said if you don't go, you're going to jail. That is how Uncle Sam "
+            "asks you.' ",
 
             " 'I really believe that if you practice enough you could paint the 'Mona Lisa' with a two-inch brush.' ",
 
@@ -127,7 +135,8 @@ def bot():
 
             " 'Remember how free clouds are. They just lay around in the sky all day long' ",
 
-            " 'That’s where the crows will sit. But we’ll have to put an elevator to put them up there because they can’t fly, but they don’t know that, so they still try.' ",
+            " 'That’s where the crows will sit. But we’ll have to put an elevator to put them up there because they "
+            "can’t fly, but they don’t know that, so they still try.' ",
 
             " 'We don’t really know where this goes — and I’m not sure we really care.' ",
 
@@ -138,131 +147,42 @@ def bot():
             " 'It’s life. It’s interesting. It’s fun.' ",
 
         ]
-    '''BOT|IMAGES''' # Enter Imgur links in the array below
-    ross_images = \
-        [
-            " [Here's a random painting :)](https://imgur.com/gallery/q2GEp) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/XJUfQ) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/L0rLs) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/m58x4xS) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/r6xblZg) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/mT1DRVY) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/Xy1sA) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/hc3HO) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/3Xfh1) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/8USdT) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/CE5blh5) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/m7ymyYp) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/2ECwjYr) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/kK1Zr) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/qs6Xd) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/DJ4zL) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/xWBUI8S) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/hM7ls6K) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/P6L9y) ",
-            " [Here's a random painting :)](https://imgur.com/a/BP7kB) ",
-            " [Here's a random painting :)](https://i.imgur.com/gyuNg8j.jpg) ",
-            " [Here's a random painting :)](https://imgur.com/7RmtwPK) ",
-            " [Here's a random painting :)](https://i.imgur.com/sgJbHNS.jpg) ",
-            " [Here's a random painting :)](https://imgur.com/a/tMF0C) ",
-            " [Here's a random painting :)](https://i.imgur.com/1qytrLH.jpg) ",
-            " [Here's a random painting :)](https://i.imgur.com/BezhUOU.jpg) ",
-            " [Here's a random painting :)](https://imgur.com/gallery/fzQkm) ",
-            " [Here's a random painting :)](https://imgur.com/a/jSPlu) ",
-            " [Here's a random painting :)](https://imgur.com/a/e01ND) ",
-            " [Here's a random painting :)](https://imgur.com/a/oeGZ6) ",
-            " [Here's a random painting :)](https://imgur.com/w4nER2N) ",
-            " [Here's a random painting :)](https://i.imgur.com/7b44qgF.jpg) ",
-            " [Here's a random painting :)](https://i.imgur.com/7b44qgF.jpg) ",
-            " [Here's a random painting :)](https://imgur.com/L48F2T6) ",
-            " [Here's a random painting :)](https://imgur.com/iYytETj) "
-        ]
+    '''BOT|IMAGES'''  # Enter Imgur links in the array below
+
+    image_urls = ['gallery/q2GEp', 'gallery/XJUfQ', 'gallery/L0rLs', 'gallery/m58x4xS', 'gallery/r6xblZg',
+                  'gallery/mT1DRVY', 'gallery/Xy1sA', 'gallery/hc3HO', 'gallery/3Xfh1', 'gallery/8USdT',
+                  'gallery/CE5blh5', 'gallery/m7ymyYp', 'gallery/2ECwjYr', 'gallery/kK1Zr', 'gallery/qs6Xd',
+                  'gallery/DJ4zL', 'gallery/xWBUI8S', 'gallery/hM7ls6K', 'gallery/P6L9y', 'a/BP7kB', 'gyuNg8j.jpg',
+                  '7RmtwPK', 'sgJbHNS.jpg', 'a/tMF0C', '1qytrLH.jpg', 'BezhUOU.jpg', 'gallery/fzQkm', 'a/jSPlu',
+                  'a/e01ND', 'a/oeGZ6', 'w4nER2N', '7b44qgF.jpg', '7b44qgF.jpg', 'L48F2T6', 'iYytETj']
+    ross_images = []
+    for url in image_urls:
+        message = ' [Here\'s a random painting :)](https://imgur.com/%s) ' % url
+        ross_images.append(message)
 
     '''YOUTUBE URLS'''
-    youtube_links = \
-    [
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=lLWEXRAnQd0) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=VlucWfTUo1A) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=dNEp3hoHSDI) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=oh5p5f5_-7A) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=kasGRkfkiPM) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=pw5ETGiiBRg) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=L5bXkI0-pEg) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=I-ousb8-SD0) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=UQ-RTZCOQn0) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=BW2wKKFvH1g) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=XZmdzfvXRuw) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=vgbMONXc9Cs) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=HCsCatvigtw) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=enutOy-nsZk) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=LygUyAb78oY) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=VnZEpic2UzU) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=zxj3xLDNxo0) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=PutvF_P4588) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=8ysFkNYwhAE) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=qTDQt_PdlYc) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=kJFB6rH3z2A) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=TohG7F8M3Ls) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=DFSIQNjKRfk) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=nJGCVFn57U8) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=IEQWfszfRlA) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=mEU0stNfkxI) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=RInDWhYceLU) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=0FYfo94qefg) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=qx2IsmrCs3c) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=qXElmiqzcI0) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=DFQlu6eqrBo) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=MHJB0IBnuD4) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=OFKFUJ9eDNs) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=Ugiwi8uizpg) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=4KYxkqlzyqM) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=Qj6lMtnCt8o) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=wrbGlR22K0Q) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=RrBsbqO9aqI) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=eTEKGOi6SVg) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=GzSqjyQUPZQ) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=O6L5YPt9CeU) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=zoTeyliLn5o) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=aA8RhtaWACA) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=Da4SPyh1ATM) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=uEUMVwc4o5U) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=UOziR7PoVco) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=vrAMRxBB5KI) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=NcVeRlPu_5w) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=Vx6v47gHBWM) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=OJ_xqtvZf3o) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=8P-YeoTmVrw) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=1s58rW0_LN4) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=lzODyJS2ZIg) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=Wj-3ct7RvAI) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=KYlM2zJnNWY) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=DqhzxdkdQS0) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=jfCsew_mz7A) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=gMEZp47VKC0) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=iRMsb9Vf7GM) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=4XxClvPZ1RE) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=fBh1nA4pMDY) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=loAzRUzx1wI) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=AGhXEPfp-W4) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=GhOGZMpPUSE) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=tWoInh2USOs) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=530_cVmexiI) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=6evqNlOO7Bw) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=o2cjLA_wgIk) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=miJ19Kz_i3Y) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=OHSm8kLE7js) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=kNZssD9zWlw) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=RqtDliGeyTg) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=lSeRrm5ZK9c) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=puGk2iFvvp0) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=EVQcDEiJh2o) ",
-    " [Here's a link to a random video of me painting](https://youtube.com/watch?v=0pwoixRikn4) "
+    youtube_urls = ['lLWEXRAnQd0', 'VlucWfTUo1A', 'dNEp3hoHSDI', 'oh5p5f5_-7A', 'kasGRkfkiPM', 'pw5ETGiiBRg',
+                    'L5bXkI0-pEg', 'I-ousb8-SD0', 'UQ-RTZCOQn0', 'BW2wKKFvH1g', 'XZmdzfvXRuw', 'vgbMONXc9Cs',
+                    'HCsCatvigtw', 'enutOy-nsZk', 'LygUyAb78oY', 'VnZEpic2UzU', 'zxj3xLDNxo0', 'PutvF_P4588',
+                    '8ysFkNYwhAE', 'qTDQt_PdlYc', 'kJFB6rH3z2A', 'TohG7F8M3Ls', 'DFSIQNjKRfk', 'nJGCVFn57U8',
+                    'IEQWfszfRlA', 'mEU0stNfkxI', 'RInDWhYceLU', '0FYfo94qefg', 'qx2IsmrCs3c', 'qXElmiqzcI0',
+                    'DFQlu6eqrBo', 'MHJB0IBnuD4', 'OFKFUJ9eDNs', 'Ugiwi8uizpg', '4KYxkqlzyqM', 'Qj6lMtnCt8o',
+                    'wrbGlR22K0Q', 'RrBsbqO9aqI', 'eTEKGOi6SVg', 'GzSqjyQUPZQ', 'O6L5YPt9CeU', 'zoTeyliLn5o',
+                    'aA8RhtaWACA', 'Da4SPyh1ATM', 'uEUMVwc4o5U', 'UOziR7PoVco', 'vrAMRxBB5KI', 'NcVeRlPu_5w',
+                    'Vx6v47gHBWM', 'OJ_xqtvZf3o', '8P-YeoTmVrw', '1s58rW0_LN4', 'lzODyJS2ZIg', 'Wj-3ct7RvAI',
+                    'KYlM2zJnNWY', 'DqhzxdkdQS0', 'jfCsew_mz7A', 'gMEZp47VKC0', 'iRMsb9Vf7GM', '4XxClvPZ1RE',
+                    'fBh1nA4pMDY', 'loAzRUzx1wI', 'AGhXEPfp-W4', 'GhOGZMpPUSE', 'tWoInh2USOs', '530_cVmexiI',
+                    '6evqNlOO7Bw', 'o2cjLA_wgIk', 'miJ19Kz_i3Y', 'OHSm8kLE7js', 'kNZssD9zWlw', 'RqtDliGeyTg',
+                    'lSeRrm5ZK9c', 'puGk2iFvvp0', 'EVQcDEiJh2o', '0pwoixRikn4']
+    youtube_links = []
+    for url in youtube_urls:
+        message = ' [Here\'s a link to a random video of me painting](https://youtube.com/watch?v=%s)' % url
+        youtube_links.append(message)
 
-    ]
+    '''BOT|REDIRECT URLS'''  # Enter Redirect/Information URL(S) in the strings below
+    code = "|| [code](https://github.com/whaliam/BobRossBot) ||💻[feedback](https://www.reddit.com/user/'" \
+           "BobRossBot_/comments/7ikvn5/feedback_3_and_code/)"
 
-    '''BOT|REDIRECT URLS''' # Enter Redirect/Information URL(S) in the strings below
-    code = "|| [code](https://github.com/whaliam/BobRossBot) ||💻[feedback](https://www.reddit.com/user/BobRossBot_/comments/7ikvn5/feedback_3_and_code/)"
-    username = "BobRossBot_"
     # Set subreddit parameters
     subreddit = reddit.subreddit("all")
 
@@ -271,8 +191,9 @@ def bot():
     # Set comment parameters
     for comment in subreddit.stream.comments():
 
-        if re.search("bob ross", comment.body, re.IGNORECASE):
-            ross_reply = random.choice(ross_quotes) + str("||") + random.choice(youtube_links) + str("||") + random.choice(ross_images)
+        if tkinter.re.search("bob ross", comment.body, tkinter.re.IGNORECASE):
+            ross_reply = random.choice(ross_quotes) + str("||") + random.choice(youtube_links) + str("||") \
+                         + random.choice(ross_images)
             print("comment found!")
             print("preparing quote")
             comment.reply(ross_reply + code)
@@ -285,27 +206,28 @@ def bot():
 
     # Created by /u/whaliam
     # 6Ep96ck9@protonmail.com
+
+
 '''GUI'''
-#Start GUI
-from tkinter import *
+# Start GUI
 
 '''GUI|MAINMENU'''
 
 # Create main window
-root = Tk()
-menu = Menu(root)
+root = tkinter.Tk()
+menu = tkinter.Menu(root)
 root.config(menu=menu)
 '''GUI|SUBMENU(S)'''
 
 # Create menu
 # First submenu
-submenu = Menu(menu)
+submenu = tkinter.Menu(menu)
 menu.add_cascade(label="Bot", menu=submenu)
 submenu.add_separator()
 submenu.add_command(label="Start Bot", command=bot)
 submenu.add_separator()
 # Second submenu
-submenu2 = Menu(root)
+submenu2 = tkinter.Menu(root)
 menu.add_cascade(label="Settings", menu=submenu2)
 submenu2.add_separator()
 submenu2.add_command(label="Exit", command=exit)
@@ -315,3 +237,4 @@ submenu2.add_separator()
 root.mainloop()
 
 '''END'''
+
