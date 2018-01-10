@@ -4,6 +4,7 @@
 import datetime
 import praw
 import random
+import re
 import time
 import tkinter
 
@@ -191,7 +192,7 @@ def bot():
     # Set comment parameters
     for comment in subreddit.stream.comments():
 
-        if tkinter.re.search("bob ross", comment.body, tkinter.re.IGNORECASE):
+        if re.search("bob ross", comment.body, re.IGNORECASE):
             ross_reply = random.choice(ross_quotes) + str("||") + random.choice(youtube_links) + str("||") \
                          + random.choice(ross_images)
             print("comment found!")
